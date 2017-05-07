@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on wyuan</title>
+    <link>https://yuan7712.github.io/tags/web/</link>
+    <description>Recent content in Web on wyuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Sun, 07 May 2017 08:57:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuan7712.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>website</title>
+      <link>https://yuan7712.github.io/post/website/</link>
+      <pubDate>Sun, 07 May 2017 08:57:24 +0800</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/website/</guid>
+      <description> 基于beautiful hugo 修改； 改变高亮  </description>
+    </item>
+    
+    <item>
+      <title>website</title>
+      <link>https://yuan7712.github.io/post/zhengyu/</link>
+      <pubDate>Sun, 07 May 2017 08:57:24 +0800</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/zhengyu/</guid>
+      <description>#### KDD16_Transferring Knowledge between Cities
+urban computing 1. 预测 北京 空气质量时，需要多种数据源： 交通，天气，路网&amp;hellip; 2. 对于北京这样大城市 各种数据都很齐全，但是如果要预测 保定 空气质量， 就会没有数据来源。 3. Transferring Knowledge. 我们将北京的数据 Transfer 保定。
+SIGIR16 Real-Time Local Event Detection in Geo-Tagged Tweet Streams urban computing
+ 利用tweet 检测实时Event ；capable of monitoring continuous streams in real time
+ a 首先在当前query window 中使用某种度量 找到一些 candidate event b 然后将这些候选 和历史 数据比较，找出突发event c 滑动窗口 找到新的 pivot
+ crowdsourcing  众包
+  #### IJCAI16 ST-MVL: Filling Missing Values in Geo-sensory Time Series Data 填补丢失的数据.</description>
+    </item>
+    
+  </channel>
+</rss>

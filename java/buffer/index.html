@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Java-Buffer</title>
+  <meta property="og:title" content="Java-Buffer" />
+  <meta name="twitter:title" content="Java-Buffer" />
+  <meta name="description" content="这个是描述!!!!">
+  <meta property="og:description" content="这个是描述!!!!">
+  <meta name="twitter:description" content="这个是描述!!!!">
+  <meta name="author" content="Some Person"/>
+  <link href='https://yuan7712.github.io/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta property="og:image" content="https://yuan7712.github.io/img/avatar-icon.png" />
+  <meta name="twitter:image" content="https://yuan7712.github.io/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta property="og:url" content="https://yuan7712.github.io/java/buffer/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="wyuan" />
+
+  <meta name="generator" content="Hugo 0.20.7" />
+  <link rel="canonical" href="https://yuan7712.github.io/java/buffer/" />
+  <link rel="alternate" href="https://yuan7712.github.io/index.xml" type="application/rss+xml" title="wyuan">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.css" integrity="sha384-wITovz90syo1dJWVh32uuETPVEtGigN07tkttEqPv+uR2SE/mbQcG7ATL28aI9H0" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://yuan7712.github.io/css/main.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="https://yuan7712.github.io/css/pygment_highlights.css" />
+  <link rel="stylesheet" href="https://yuan7712.github.io/css/highlight-monokai-sublime.css" />
+
+</head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://yuan7712.github.io">wyuan</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Blog" href="/">Blog</a>
+            </li>
+          
+        
+          
+            <li class="navlinks-container">
+              <a class="navlinks-parent" href="javascript:void(0)">Samples</a>
+              <div class="navlinks-children">
+                
+                  <a href="/linux/">Linux</a>
+                
+                  <a href="/java/">Java</a>
+                
+                  <a href="/post/">web</a>
+                
+              </div>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/page/about/">About</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Tags" href="/tags">Tags</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    <div class="avatar-container">
+      <div class="avatar-img-border">
+        
+          <a title="wyuan" href="https://yuan7712.github.io">
+            <img class="avatar-img" src="https://yuan7712.github.io/img/avatar-icon.png" alt="wyuan" />
+          </a>
+        
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+    
+  
+  
+  
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    <div class="intro-header no-img">
+      
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="java-heading">
+              <h1>Java-Buffer</h1>
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+    
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        
+
+<h2 id="1buffer">1Buffer</h2>
+
+<ol>
+<li>Buffer是NIO中的顶层类；</li>
+
+<li><p>java为7种基本类型(除了Boolean)定义了 对应的Buffer类，这些类基本相同。 主要的操作就是get和put;
+类库中提供的这7种类都是抽象类，其实现在nio包内(包访问权限)； 一般使用allocate即可创建对应的Buffer;</p></li>
+
+<li><p><strong>ByteBuffer</strong> 比较特殊； 像其余的6种类型，创建Buffer时都只能在堆中创建(JVM管理)， 但是ByteBuffer
+还可以直接在内存中创建(JVM没有权限管理)即<strong>直接内存。</strong></p></li>
+
+<li><p><strong>MappedByteBuffer</strong> 此类就是一种直接内存类， 用来NIO中的文件映射。 一般来说执行read读取文件时，调用内核后，OS会将磁盘中的文件读取到<strong>内核空间内存中，</strong> 然后再copy到用户空间内存<strong>JVM</strong>，最后程序便可以使用该文件； NIO利用<strong>直接内存</strong>，省去了内核到用户内存的拷贝过程，二者读写都是基于此内存操作， 所以比较高效。</p></li>
+
+<li><p>ReadOnly： 有的缓冲区是只读的，此时调用put就会抛出异常；isReadOnly判断是否只读；</p></li>
+</ol>
+
+<ul>
+<li>功能：</li>
+</ul>
+
+<p>该类作为超类，Buffer提供的也就是缓冲区作用。基本的操作就是get和put； 只是子类对于不同的数据类型有不同的扩展；</p>
+
+<ul>
+<li><p>主要变量：</p>
+
+<ol>
+<li>position： 指示当前缓冲区 读写指针的位置；</li>
+<li>limit：  表示读写的界限；</li>
+<li>capacity： 底层缓冲区容量；</li>
+<li>mark： 标记，和旧IO中一样含义，标记此位置，然后可以调用reset将position回退到此位置；</li>
+<li>address： 此不常见,只是用于直接缓冲区，表示直接内存的起始位置；
+mark &lt;= position &lt;= limit &lt;= capacity</li>
+</ol></li>
+
+<li><p>关于读写</p>
+
+<ol>
+<li>Buffer作为顶层类，并没有定义put get这些抽象方法.(但是子类都是通过这两个函数读写)</li>
+<li>对于读写必然会检查以上几个变量边界等，该类定义了3中边界异常：BufferOverflowException，BufferUnderflowException 和IndexOutOfBoundsException(前两个一般是调用get() put()时的异常上下溢出，最后一个是get(i) put(i) 对指定位置操作异常；)；</li>
+</ol></li>
+
+<li><p>函数
+<img src="./97ba5f6a-116c-4c7c-9837-d8f07f105463.png" alt="" /></p>
+
+<ol>
+<li>clear(): 一般将要<strong>填充缓冲区</strong>时调用该函数，将position置为0 limit置为容量， 也就是开辟一些空间来写入数据；</li>
+<li>flip(): 相反在<strong>读取缓冲区前调用</strong>，例如当调用put写入些数据后，position指向最后写入的数据，此时调用flip 将limit限制在此处，pos归0 便可以安全读取；</li>
+<li>rewind(): 和clear() 类似，只是此处假定已经适当设置了limit;</li>
+</ol></li>
+</ul>
+
+<p>这些函数主要就是操作 limit 和pos 变量； 关于 mark等也有相关方法；</p>
+
+<hr />
+
+<h2 id="2-bytebuffer">2 ByteBuffer</h2>
+
+<p>主要功能：(api)</p>
+
+<ul>
+<li>单个字节的读写即： get和put函数；</li>
+<li>批量字节的读写； byte[] 参数</li>
+<li><strong>别的类型的读写。</strong>  getInt等；  <strong>CharBuffer</strong>等6种类型中都只有操作自己指定类型的get函数。(ByteBuffer底层操作字节，不同类型读写也就是 多读几个字节然后组合 涉及到大小端不同顺序)；</li>
+<li><strong>视图缓冲区；也是ByteBuffer特有</strong>， 主要是asIntBuffer()等函数，其实也就是对将该ByteBuffer包装为其余类型，底层使用的数组还是相同的，只是postion limit等变量时独立的；</li>
+</ul>
+
+<p>变量：</p>
+
+<ol>
+<li>byte[] hb： 该变量指向我们底层分配的数组，但是ByteBuffer 当作为<strong>直接内存时该变量不再使用</strong>，而是直接使用buffer中的address 直接指向内存地址；</li>
+<li><strong>offset：</strong>  Buffer中定义的许多变量，都是相对的，也就是pos=0 并不代表指向hb[0]指向的是hb[offset+0];</li>
+</ol>
+
+<p>主要方法：</p>
+
+<ul>
+<li>allocate(): 创建指定长度的Buffer. ByteBuffer有直接缓冲区和非直接缓冲区。  而其余Buffrt只有非直接；</li>
+<li>wrap(): 也能创建。只是使用自己提供的byte[];</li>
+
+<li><p>** compacting、duplicating 和 slicing**</p>
+
+<ol>
+<li><p>compact:  压缩缓冲区，也就是将pos-limit这些元素向前移动pos个单位；<strong>pos设置为这些左边元素的下一个位置</strong>(也就是复制元素的个数)，limit设置为capacity；
+场景： 比如有limit个元素等待读取，但是现在只读取到pos个，我们就可以调用compact将已经读取的元素释放，然后继续写入。</p></li>
+
+<li><p>duplicate:  就是简单地复制当前Buffer,相当于<strong>视图</strong>， 因为底层还是使用相同的数据，只是pos等变量独立。是否直接内存，只读等还是和 原来Buffer一样；</p></li>
+
+<li><p>asReadOnlyBuffer： 和duplicate一样也是返回一个视图，只是<strong>该Buffer只读</strong></p></li>
+
+<li><p>slice:  底层还是基于原始数组，只是切分其中一段作为缓冲区(<strong>pos-limit</strong>位置)； 此缓冲区视图将pos-limit位置作为新的缓冲区，pos设置为0， 修改offset即可；(这些变量都是相对位置，通过offset很好选择)；
+<a href="http://blog.csdn.net/aiwuzhi12/article/details/60319642">http://blog.csdn.net/aiwuzhi12/article/details/60319642</a></p></li>
+</ol></li>
+</ul>
+
+<p>字节序：</p>
+
+<p>由于该类底层字节数组，但是操作时提供各种类型的put get 所以必然涉及到字节序；<strong>ByteOrder类</strong>可以获取当前系统的字节序。 <strong>默认大端</strong>， 可以调用order()修改字节序；</p>
+
+<h3 id="2-1-directbytebuffer">2.1 DirectByteBuffer</h3>
+
+<p>直接缓冲区：  此类在创建时调用unsafe直接在内存中分配，并不是在JVM堆中，所以不受GC控制；在get put等操作也都是调用unsafe方法直接操作内存；</p>
+
+<p>创建方法： 1. ByteBuffer中创建； 2. FileChannel中map方法，将一个文件映射为直接内存；</p>
+
+<h3 id="2-2-heapbytebuffer">2.2  HeapByteBuffer</h3>
+
+<p>非直接缓冲区： 创建时就是使用new关键字申请内存，底层也就是JVM堆中的数组。 在get put等操作中使用数组的索引操作即可；</p>
+
+<h3 id="2-3-总结">2.3 总结：</h3>
+
+<p>此部分类库，不涉及线程安全，实现基本一致。</p>
+
+<hr />
+
+      </article>
+
+      <ul class="pager blog-pager">
+        
+        
+      </ul>
+
+      
+        
+      
+
+    </div>
+  </div>
+</div>
+
+    <footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:youremail@domain.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/hello" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="https://yuan7712.github.io/index.xml" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          Some Person
+          &nbsp;&bull;&nbsp;
+          2017
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="https://yuan7712.github.io">wyuan</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="http://gohugo.io">Hugo v0.20.7</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/katex.min.js" integrity="sha384-/y1Nn9+QQAipbNQWU65krzJralCnuOasHncUFXGkdwntGeSvQicrYkiUBwsgUqc1" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.7.1/contrib/auto-render.min.js" integrity="sha384-dq1/gEHSxPZQ7DdrM82ID4YVol9BYyU7GbWlIwnwyPzotpoc57wDw/guX8EaYGPx" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://yuan7712.github.io/js/main.js"></script>
+<script src="https://yuan7712.github.io/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> renderMathInElement(document.body); </script>
+
+
+
+
+
+  </body>
+</html>
+

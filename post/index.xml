@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on wyuan</title>
+    <link>https://yuan7712.github.io/post/</link>
+    <description>Recent content in Posts on wyuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Sun, 07 May 2017 08:57:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuan7712.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>website</title>
+      <link>https://yuan7712.github.io/post/website/</link>
+      <pubDate>Sun, 07 May 2017 08:57:24 +0800</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/website/</guid>
+      <description> 基于beautiful hugo 修改； 改变高亮  </description>
+    </item>
+    
+    <item>
+      <title>website</title>
+      <link>https://yuan7712.github.io/post/zhengyu/</link>
+      <pubDate>Sun, 07 May 2017 08:57:24 +0800</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/zhengyu/</guid>
+      <description>#### KDD16_Transferring Knowledge between Cities
+urban computing 1. 预测 北京 空气质量时，需要多种数据源： 交通，天气，路网&amp;hellip; 2. 对于北京这样大城市 各种数据都很齐全，但是如果要预测 保定 空气质量， 就会没有数据来源。 3. Transferring Knowledge. 我们将北京的数据 Transfer 保定。
+SIGIR16 Real-Time Local Event Detection in Geo-Tagged Tweet Streams urban computing
+ 利用tweet 检测实时Event ；capable of monitoring continuous streams in real time
+ a 首先在当前query window 中使用某种度量 找到一些 candidate event b 然后将这些候选 和历史 数据比较，找出突发event c 滑动窗口 找到新的 pivot
+ crowdsourcing  众包
+  #### IJCAI16 ST-MVL: Filling Missing Values in Geo-sensory Time Series Data 填补丢失的数据.</description>
+    </item>
+    
+    <item>
+      <title>sample</title>
+      <link>https://yuan7712.github.io/post/sample/</link>
+      <pubDate>Sat, 06 May 2017 14:59:27 +0900</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/sample/</guid>
+      <description> post测试  A B   baidu.com
+ </description>
+    </item>
+    
+    <item>
+      <title>Soccer</title>
+      <link>https://yuan7712.github.io/post/2015-01-19-soccer/</link>
+      <pubDate>Mon, 19 Jan 2015 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/2015-01-19-soccer/</guid>
+      <description>From Wikipedia:
+Association football, more commonly known as football or soccer,[2] is a sport played between two teams of eleven players with a spherical ball. It is played by 250 million players in over 200 countries, making it the world&amp;rsquo;s most popular sport.[3][4][5][6] The game is played on a rectangular field with a goal at each end. The object of the game is to score by getting the ball into the opposing goal.</description>
+    </item>
+    
+    <item>
+      <title>Pirates arrrr</title>
+      <link>https://yuan7712.github.io/post/2015-01-15-pirates/</link>
+      <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/2015-01-15-pirates/</guid>
+      <description>Piracy is typically an act of robbery or criminal violence at sea. The term can include acts committed on land, in the air, or in other major bodies of water or on a shore. It does not normally include crimes committed against persons traveling on the same vessel as the perpetrator (e.g. one passenger stealing from others on the same vessel). The term has been used throughout history to refer to raids across land borders by non-state agents.</description>
+    </item>
+    
+  </channel>
+</rss>

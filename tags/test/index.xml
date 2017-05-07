@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test on wyuan</title>
+    <link>https://yuan7712.github.io/tags/test/</link>
+    <description>Recent content in Test on wyuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Sat, 06 May 2017 14:59:27 +0900</lastBuildDate>
+    
+	<atom:link href="https://yuan7712.github.io/tags/test/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>sample</title>
+      <link>https://yuan7712.github.io/post/sample/</link>
+      <pubDate>Sat, 06 May 2017 14:59:27 +0900</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/sample/</guid>
+      <description> post测试  A B   baidu.com
+ </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>测试 on wyuan</title>
+    <link>https://yuan7712.github.io/tags/%E6%B5%8B%E8%AF%95/</link>
+    <description>Recent content in 测试 on wyuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Sat, 06 May 2017 14:59:27 +0900</lastBuildDate>
+    
+	<atom:link href="https://yuan7712.github.io/tags/%E6%B5%8B%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>测试文章</title>
+      <link>https://yuan7712.github.io/linux/tt/</link>
+      <pubDate>Sat, 06 May 2017 14:59:27 +0900</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/linux/tt/</guid>
+      <description>在创建linux等子目录时，在配置文件config中使用小写，否则错误; 404 未解决 测试代码块  # coding: utf-8 import re import requests base_headers = {&#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36&#39;,&#39;Referer&#39;:&#39;https://ipgw.neu.edu.cn/srun_portal_pc.php?url=&amp;amp;ac_id=1&#39;,&#39;Origin&#39;: &#39;https://ipgw.neu.edu.cn&#39;} session = requests.Session() session.headers = base_headers resp = session.post(&#39;https://ipgw.neu.edu.cn/srun_portal_pc.php?url=&amp;amp;ac_id=1&#39;, {&#39;action&#39;:&#39;login&#39;,&#39;ac_id&#39;:&#39;1&#39;,&#39;user_ip&#39;:&#39;&#39;,&#39;nas_ip&#39;:&#39;&#39;,&#39;user_mac&#39;:&#39;&#39;,&#39;url&#39;:&#39;&#39;,&#39;username&#39;:&#39;*****&#39;,&#39;password&#39;:&#39;****&#39;,&#39;save_me&#39;:&#39;0&#39;}) if u&#39;网络已连接&#39; in resp.text: print(&#39;ok&#39;) else: print(&#39;error&#39;)   java code  public class Test563 { public static void main(String[] args) { // TODO Auto-generated method stub TreeNode f = new TreeNode(2); TreeNode r = new TreeNode(1); r.</description>
+    </item>
+    
+  </channel>
+</rss>

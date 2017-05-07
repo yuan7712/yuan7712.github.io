@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on wyuan</title>
+    <link>https://yuan7712.github.io/tags/</link>
+    <description>Recent content in Tags on wyuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Sat, 06 May 2017 14:59:27 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuan7712.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java</title>
+      <link>https://yuan7712.github.io/tags/java/</link>
+      <pubDate>Sat, 06 May 2017 14:59:27 +0800</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://yuan7712.github.io/tags/linux/</link>
+      <pubDate>Sat, 06 May 2017 14:59:27 +0900</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>https://yuan7712.github.io/tags/test/</link>
+      <pubDate>Sat, 06 May 2017 14:59:27 +0900</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/tags/test/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web</title>
+      <link>https://yuan7712.github.io/tags/web/</link>
+      <pubDate>Sun, 07 May 2017 08:57:24 +0800</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>测试</title>
+      <link>https://yuan7712.github.io/tags/%E6%B5%8B%E8%AF%95/</link>
+      <pubDate>Sat, 06 May 2017 14:59:27 +0900</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/tags/%E6%B5%8B%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

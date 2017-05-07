@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on wyuan</title>
+    <link>https://yuan7712.github.io/tags/java/</link>
+    <description>Recent content in Java on wyuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Sat, 06 May 2017 14:59:27 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuan7712.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java-Buffer</title>
+      <link>https://yuan7712.github.io/java/buffer/</link>
+      <pubDate>Sat, 06 May 2017 14:59:27 +0800</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/java/buffer/</guid>
+      <description>1Buffer  Buffer是NIO中的顶层类； java为7种基本类型(除了Boolean)定义了 对应的Buffer类，这些类基本相同。 主要的操作就是get和put; 类库中提供的这7种类都是抽象类，其实现在nio包内(包访问权限)； 一般使用allocate即可创建对应的Buffer;
+ ByteBuffer 比较特殊； 像其余的6种类型，创建Buffer时都只能在堆中创建(JVM管理)， 但是ByteBuffer 还可以直接在内存中创建(JVM没有权限管理)即直接内存。
+ MappedByteBuffer 此类就是一种直接内存类， 用来NIO中的文件映射。 一般来说执行read读取文件时，调用内核后，OS会将磁盘中的文件读取到内核空间内存中， 然后再copy到用户空间内存JVM，最后程序便可以使用该文件； NIO利用直接内存，省去了内核到用户内存的拷贝过程，二者读写都是基于此内存操作， 所以比较高效。
+ ReadOnly： 有的缓冲区是只读的，此时调用put就会抛出异常；isReadOnly判断是否只读；
+   功能：  该类作为超类，Buffer提供的也就是缓冲区作用。基本的操作就是get和put； 只是子类对于不同的数据类型有不同的扩展；
+ 主要变量：
+ position： 指示当前缓冲区 读写指针的位置； limit： 表示读写的界限； capacity： 底层缓冲区容量； mark： 标记，和旧IO中一样含义，标记此位置，然后可以调用reset将position回退到此位置； address： 此不常见,只是用于直接缓冲区，表示直接内存的起始位置； mark &amp;lt;= position &amp;lt;= limit &amp;lt;= capacity  关于读写
+ Buffer作为顶层类，并没有定义put get这些抽象方法.(但是子类都是通过这两个函数读写) 对于读写必然会检查以上几个变量边界等，该类定义了3中边界异常：BufferOverflowException，BufferUnderflowException 和IndexOutOfBoundsException(前两个一般是调用get() put()时的异常上下溢出，最后一个是get(i) put(i) 对指定位置操作异常；)；  函数  clear(): 一般将要填充缓冲区时调用该函数，将position置为0 limit置为容量， 也就是开辟一些空间来写入数据； flip(): 相反在读取缓冲区前调用，例如当调用put写入些数据后，position指向最后写入的数据，此时调用flip 将limit限制在此处，pos归0 便可以安全读取； rewind(): 和clear() 类似，只是此处假定已经适当设置了limit;   这些函数主要就是操作 limit 和pos 变量； 关于 mark等也有相关方法；</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wyuan</title>
+    <link>https://yuan7712.github.io/</link>
+    <description>Recent content on wyuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>youremail@domain.com (Some Person)</managingEditor>
+    <webMaster>youremail@domain.com (Some Person)</webMaster>
+    <lastBuildDate>Sun, 07 May 2017 08:57:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://yuan7712.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>website</title>
+      <link>https://yuan7712.github.io/post/website/</link>
+      <pubDate>Sun, 07 May 2017 08:57:24 +0800</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/website/</guid>
+      <description> 基于beautiful hugo 修改； 改变高亮  </description>
+    </item>
+    
+    <item>
+      <title>website</title>
+      <link>https://yuan7712.github.io/post/zhengyu/</link>
+      <pubDate>Sun, 07 May 2017 08:57:24 +0800</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/zhengyu/</guid>
+      <description>#### KDD16_Transferring Knowledge between Cities
+urban computing 1. 预测 北京 空气质量时，需要多种数据源： 交通，天气，路网&amp;hellip; 2. 对于北京这样大城市 各种数据都很齐全，但是如果要预测 保定 空气质量， 就会没有数据来源。 3. Transferring Knowledge. 我们将北京的数据 Transfer 保定。
+SIGIR16 Real-Time Local Event Detection in Geo-Tagged Tweet Streams urban computing
+ 利用tweet 检测实时Event ；capable of monitoring continuous streams in real time
+ a 首先在当前query window 中使用某种度量 找到一些 candidate event b 然后将这些候选 和历史 数据比较，找出突发event c 滑动窗口 找到新的 pivot
+ crowdsourcing  众包
+  #### IJCAI16 ST-MVL: Filling Missing Values in Geo-sensory Time Series Data 填补丢失的数据.</description>
+    </item>
+    
+    <item>
+      <title>Java-Buffer</title>
+      <link>https://yuan7712.github.io/java/buffer/</link>
+      <pubDate>Sat, 06 May 2017 14:59:27 +0800</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/java/buffer/</guid>
+      <description>1Buffer  Buffer是NIO中的顶层类； java为7种基本类型(除了Boolean)定义了 对应的Buffer类，这些类基本相同。 主要的操作就是get和put; 类库中提供的这7种类都是抽象类，其实现在nio包内(包访问权限)； 一般使用allocate即可创建对应的Buffer;
+ ByteBuffer 比较特殊； 像其余的6种类型，创建Buffer时都只能在堆中创建(JVM管理)， 但是ByteBuffer 还可以直接在内存中创建(JVM没有权限管理)即直接内存。
+ MappedByteBuffer 此类就是一种直接内存类， 用来NIO中的文件映射。 一般来说执行read读取文件时，调用内核后，OS会将磁盘中的文件读取到内核空间内存中， 然后再copy到用户空间内存JVM，最后程序便可以使用该文件； NIO利用直接内存，省去了内核到用户内存的拷贝过程，二者读写都是基于此内存操作， 所以比较高效。
+ ReadOnly： 有的缓冲区是只读的，此时调用put就会抛出异常；isReadOnly判断是否只读；
+   功能：  该类作为超类，Buffer提供的也就是缓冲区作用。基本的操作就是get和put； 只是子类对于不同的数据类型有不同的扩展；
+ 主要变量：
+ position： 指示当前缓冲区 读写指针的位置； limit： 表示读写的界限； capacity： 底层缓冲区容量； mark： 标记，和旧IO中一样含义，标记此位置，然后可以调用reset将position回退到此位置； address： 此不常见,只是用于直接缓冲区，表示直接内存的起始位置； mark &amp;lt;= position &amp;lt;= limit &amp;lt;= capacity  关于读写
+ Buffer作为顶层类，并没有定义put get这些抽象方法.(但是子类都是通过这两个函数读写) 对于读写必然会检查以上几个变量边界等，该类定义了3中边界异常：BufferOverflowException，BufferUnderflowException 和IndexOutOfBoundsException(前两个一般是调用get() put()时的异常上下溢出，最后一个是get(i) put(i) 对指定位置操作异常；)；  函数  clear(): 一般将要填充缓冲区时调用该函数，将position置为0 limit置为容量， 也就是开辟一些空间来写入数据； flip(): 相反在读取缓冲区前调用，例如当调用put写入些数据后，position指向最后写入的数据，此时调用flip 将limit限制在此处，pos归0 便可以安全读取； rewind(): 和clear() 类似，只是此处假定已经适当设置了limit;   这些函数主要就是操作 limit 和pos 变量； 关于 mark等也有相关方法；</description>
+    </item>
+    
+    <item>
+      <title>sample</title>
+      <link>https://yuan7712.github.io/post/sample/</link>
+      <pubDate>Sat, 06 May 2017 14:59:27 +0900</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/sample/</guid>
+      <description> post测试  A B   baidu.com
+ </description>
+    </item>
+    
+    <item>
+      <title>测试文章</title>
+      <link>https://yuan7712.github.io/linux/tt/</link>
+      <pubDate>Sat, 06 May 2017 14:59:27 +0900</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/linux/tt/</guid>
+      <description>在创建linux等子目录时，在配置文件config中使用小写，否则错误; 404 未解决 测试代码块  # coding: utf-8 import re import requests base_headers = {&#39;User-Agent&#39;: &#39;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/57.0.2987.133 Safari/537.36&#39;,&#39;Referer&#39;:&#39;https://ipgw.neu.edu.cn/srun_portal_pc.php?url=&amp;amp;ac_id=1&#39;,&#39;Origin&#39;: &#39;https://ipgw.neu.edu.cn&#39;} session = requests.Session() session.headers = base_headers resp = session.post(&#39;https://ipgw.neu.edu.cn/srun_portal_pc.php?url=&amp;amp;ac_id=1&#39;, {&#39;action&#39;:&#39;login&#39;,&#39;ac_id&#39;:&#39;1&#39;,&#39;user_ip&#39;:&#39;&#39;,&#39;nas_ip&#39;:&#39;&#39;,&#39;user_mac&#39;:&#39;&#39;,&#39;url&#39;:&#39;&#39;,&#39;username&#39;:&#39;*****&#39;,&#39;password&#39;:&#39;****&#39;,&#39;save_me&#39;:&#39;0&#39;}) if u&#39;网络已连接&#39; in resp.text: print(&#39;ok&#39;) else: print(&#39;error&#39;)   java code  public class Test563 { public static void main(String[] args) { // TODO Auto-generated method stub TreeNode f = new TreeNode(2); TreeNode r = new TreeNode(1); r.</description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://yuan7712.github.io/linux/ubuntu/</link>
+      <pubDate>Wed, 03 May 2017 14:59:27 +0900</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/linux/ubuntu/</guid>
+      <description>1 上网速度慢  Ubuntu 网速慢，主要是把时间浪费在域名解析上。我们可以用dnsmasq解决这问题。  安装dnsmasq http://www.linuxidc.com/Linux/2010-06/26587.htm
+1. sudo apt-get install dnsmasq 2. sudo gedit /etc/dnsmasq.conf #resolv-file替换为 resolv-file=/etc/resolv.dnsmasq.conf 3. sudo cp /etc/resolv.conf /etc/resolv.dnsmasq.conf 备份 4. sudo gedit /etc/resolv.conf 将其中的域名服务器全部去掉，加入以下这行 nameserver 127.0.0.1 5. sudo gedit /etc/ppp/peers/provider（Ubuntu 10.04的文件名是provider，其他版本可能不同） 在 usepeerdns 前面增加 ＃ ，也就是把这条语句覆盖掉。 以防，resolv.conf的设置被pppoe覆盖。 6. 重启电脑。不重启，你会发现无法解析域名。所以一定要重启电脑，来达到重新启动dnsmasq的目的。  2. sublime3 安 装  添加sublime text 3的仓库： sudo add-apt-repository ppa:webupd8team/sublime-text-3 更新软件库： sudo apt-get update 安装Sublime Text 3: sudo apt-get install sublime-text-installer  3.</description>
+    </item>
+    
+    <item>
+      <title>Soccer</title>
+      <link>https://yuan7712.github.io/post/2015-01-19-soccer/</link>
+      <pubDate>Mon, 19 Jan 2015 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/2015-01-19-soccer/</guid>
+      <description>From Wikipedia:
+Association football, more commonly known as football or soccer,[2] is a sport played between two teams of eleven players with a spherical ball. It is played by 250 million players in over 200 countries, making it the world&amp;rsquo;s most popular sport.[3][4][5][6] The game is played on a rectangular field with a goal at each end. The object of the game is to score by getting the ball into the opposing goal.</description>
+    </item>
+    
+    <item>
+      <title>Pirates arrrr</title>
+      <link>https://yuan7712.github.io/post/2015-01-15-pirates/</link>
+      <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/post/2015-01-15-pirates/</guid>
+      <description>Piracy is typically an act of robbery or criminal violence at sea. The term can include acts committed on land, in the air, or in other major bodies of water or on a shore. It does not normally include crimes committed against persons traveling on the same vessel as the perpetrator (e.g. one passenger stealing from others on the same vessel). The term has been used throughout history to refer to raids across land borders by non-state agents.</description>
+    </item>
+    
+    <item>
+      <title>About me</title>
+      <link>https://yuan7712.github.io/page/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <author>youremail@domain.com (Some Person)</author>
+      <guid>https://yuan7712.github.io/page/about/</guid>
+      <description>My name is Inigo wy. I have the following qualities:
+ I rock a great mustache I&amp;rsquo;m extremely loyal to my family  What else do you need?
+my history To be honest, I&amp;rsquo;m having some trouble remembering right now, so why don&amp;rsquo;t you just watch my movie and it will answer all your questions.</description>
+    </item>
+    
+  </channel>
+</rss>
